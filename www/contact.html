@@ -4,42 +4,47 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/script.js"></script>
     <title>What's the craic</title>
   </head>
-  <body>
+  <body class="w3-blue-grey">
 
-    <!-- NAVIGATION BAR -->
-    <div class="w3-sidebar w3-bar-block w3-blue-grey w3-animate-left" style="display:none"id="burgerBar">
-      <img src="img/logo.jpg" class="w3-image" />
-      <a href="index.html" class="w3-bar-item w3-button w3-large">Home</a>
-      <a href="login.html" class="w3-bar-item w3-button w3-large">Log in</a>
-      <a href="contact.html" class="w3-bar-item w3-button w3-large">Contact</a><br />
-      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    </div>
-
+    <!-- NAVIGATION BAR ---------------------------------------------------->
     <div class="w3-bar w3-teal">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html"><i class="fas fa-home w3-xlarge" style="padding-right:30px;"></i>Home</a>
+          <a href="login.html"><i class="fas fa-sign-in-alt w3-xlarge" style="padding-right:30px;"></i>Log in</a>
+          <a href="contact.html"><i class="fas fa-phone w3-xlarge" style="padding-right:30px;"></i>Contact</a>
+        </div>
+      </div>
+      <button class="w3-button w3-xlarge w3-hide-large w3-hide-medium" onclick="openNav()">&#9776;</button>
       <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
       <a href="login.html" class="w3-bar-item w3-button w3-hide-small">Log in</a>
       <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
-      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="navFunction()">&#9776;</a> -->
-      <button class="w3-button w3-large w3-hide-large w3-hide-medium" onclick="w3_open()">&#9776;</button>
     </div>
+    <!-- /Navigation -->
 
-
-
-      <h1>Contact</h1>
-
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1000px">
+      <!-- Contact Section -->
+      <div class="w3-container" id="contact">
+        <h3 class="w3-border-bottom w3-border-light-grey">Contact</h3>
+        <p>Please fill out the contact form:</p>
+        <form action="/action_page.php" target="_blank">
+          <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+          <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+          <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+          <button class="w3-button w3-black w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
     </div>
-
-      <!-- <div class="w3-sidebar w3-bar-block w3-red w3-animate-left" style="display:none" id="burgerBar">
-        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="login.html" class="w3-bar-item w3-button">Log in</a>
-      </div> -->
-
   </body>
 </html>

@@ -4,81 +4,83 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/script.js"></script>
     <title>What's the craic</title>
   </head>
-  <body>
+  <body class="w3-blue-grey">
 
     <!-- NAVIGATION BAR ---------------------------------------------------->
-    <div class="w3-sidebar w3-bar-block w3-blue-grey w3-animate-left" style="display:none"id="burgerBar">
-      <img src="img/logo.jpg" class="w3-image" />
-      <a href="index.html" class="w3-bar-item w3-button w3-large">Home</a>
-      <a href="login.html" class="w3-bar-item w3-button w3-large">Log in</a>
-      <a href="contact.html" class="w3-bar-item w3-button w3-large">Contact</a><br />
-      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-    </div>
-
     <div class="w3-bar w3-teal">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html" class="w3-text-white"><i class="fas fa-home w3-xlarge" style="padding-right:30px;"></i>Home</a>
+          <a href="login.html" class="w3-text-white"><i class="fas fa-sign-in-alt w3-xlarge" style="padding-right:30px;"></i>Log in</a>
+          <a href="contact.html" class="w3-text-white"><i class="fas fa-phone w3-xlarge" style="padding-right:30px;"></i>Contact</a>
+        </div>
+      </div>
+      <button class="w3-button w3-xlarge w3-hide-large w3-hide-medium" onclick="openNav()">&#9776;</button>
       <a href="index.html" class="w3-bar-item w3-button w3-hide-small">Home</a>
       <a href="login.html" class="w3-bar-item w3-button w3-hide-small">Log in</a>
       <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
-      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="navFunction()">&#9776;</a> -->
-      <button class="w3-button w3-large w3-hide-large w3-hide-medium" onclick="w3_open()">&#9776;</button>
     </div>
     <!-- /Navigation -->
 
     <!-- PAGE CONTENT ----------------------------------------------------->
-    <div class="w3-container">
-<!--
-      <div class="custom-select" style="width:200px;">
-        <select>
-          <option value="0">Select car:</option>
-          <option value="1">Audi</option>
-          <option value="2">BMW</option>
-          <option value="3">Citroen</option>
-          <option value="4">Ford</option>
-          <option value="5">Honda</option>
-          <option value="6">Jaguar</option>
-          <option value="7">Land Rover</option>
-          <option value="8">Mercedes</option>
-          <option value="9">Mini</option>
-          <option value="10">Nissan</option>
-          <option value="11">Toyota</option>
-          <option value="12">Volvo</option>
-        </select>
-      </div> -->
-
-      <div class="w3-container w3-padding">
+    <div class="w3-content w3-padding" style="max-width:1000px">
 
         <h4>Select county:</h4>
-        <select class="w3-select w3-border" name="option">
-          <option value="" disabled selected>Choose your option</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select><br /><br />
-
-        <h4>Select town:</h4>
-        <select class="w3-select w3-border" name="option">
-          <option value="" disabled selected>Choose your option</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
+        <select class="w3-select" name="option" id="county" onchange="ChangeCountyList()">
+          <option value="" disabled selected>Choose county</option>
+          <option value="antrim">Antrim</option>
+          <option value="armagh">Armagh</option>
+          <option value="carlow">Carlow</option>
+          <option value="cavan">Cavan</option>
+          <option value="clare">Clare</option>
+          <option value="cork">Cork</option>
+          <option value="derry">Derry</option>
+          <option value="donegal">Donegal</option>
+          <option value="down">Down</option>
+          <option value="dublin">Dublin</option>
+          <option value="fermanagh">Fermanagh</option>
+          <option value="galway">Galway</option>
+          <option value="kerry">Kerry</option>
+          <option value="kildare">Kildare</option>
+          <option value="kilkenny">Kilkenny</option>
+          <option value="laois">Laois</option>
+          <option value="leitrim">Leitrim</option>
+          <option value="limerick">Limerick</option>
+          <option value="longford">Longford</option>
+          <option value="louth">Louth</option>
+          <option value="mayo">Mayo</option>
+          <option value="meath">Meath</option>
+          <option value="monaghan">Monaghan</option>
+          <option value="offaly">Offaly</option>
+          <option value="roscommon">Roscommon</option>
+          <option value="sligo">Sligo</option>
+          <option value="tipperary">Tipperary</option>
+          <option value="tyrone">Tyrone</option>
+          <option value="waterford">Waterford</option>
+          <option value="westmeath">Westmeath</option>
+          <option value="wexford">Wexford</option>
+          <option value="wicklow">Wicklow</option>
         </select>
 
-      </div>
+        <h4>Select town:</h4>
+        <select class="w3-select w3-border" name="option" id="town">
+          <option value="" disabled selected>Choose town</option>
+        </select><br /><br />
 
-    </div><!-- /container -->
+        <div>
+          <button onclick="displayTown()">Choose</button>
+          <h3 id="countySel">County: </h3>
+          <h3 id="townSel">Town: </h3>
+        </div>
+
+      </div><!-- /w3-blue-grey w3-padding-large -->
     <!-- END PAGE CONTENT -->
-
-      <!-- <div class="w3-sidebar w3-bar-block w3-red w3-animate-left" style="display:none" id="burgerBar">
-        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="login.html" class="w3-bar-item w3-button">Log in</a>
-      </div> -->
 
   </body>
 </html>
